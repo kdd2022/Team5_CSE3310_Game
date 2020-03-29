@@ -7,7 +7,3 @@ Until further notice, we will be using Unity ver. 2019.3.4f1, we will be using o
 If you already have a newer version, you can create a snapshot of 2019.3.4f1 on the installs
 tab on your Unity Hub.
 
-Android Studio ( 27 API - 10.0 Q)
-***********************
-Until further notice, we will be using the SDK for Android (10.0 Q). Which is the latest
-version. This follows the class guidelines and is the most stable.
