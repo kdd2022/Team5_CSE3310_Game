@@ -1,0 +1,23 @@
+For the easiest experience I recommend downloading the GitHub desktop app from here:
+https://desktop.github.com/
+
+Here you must sign into your account to access the application's features, once in it look 
+at the top tab of the screen. Go to File, then clone repository. Enter the link of our
+repository: https://github.com/ColinK99/Team5_CSE3310_Game, then select the folder you want
+the local repository to be located.
+
+Now you have a local version of the repository, and are free to edit it however you want.
+When you've finished with your work for the day, and are at an acceptable spot you will 
+want to "commit to master" giving a brief description of your implementations.
+(Be advised, this will take awhile, I'm working on a way to condense the file)
+
+Once sent, it will be pending review, this is to review conflicting changes between multiple
+different versions of the project. If two members codes are conflicting with each other, I'll 
+be sure to contact both of you to find a way to consolidate the code. Be sure to be open about
+what you're doing, i.e) Global variables you need consistent, assets that need to be implemented,
+placeholder assets, etc. To ensure that minimal changes are needed.
+
+Keep watch over the discord for updates and tips from members of the team.
+
+Thank you for taking the time reading this,
+here's to a good product!
