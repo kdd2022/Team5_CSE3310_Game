@@ -4,24 +4,20 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    private GameObject block;
-    
+    private Collider2D playerCollider;
+    private Collider2D playerGround;
+    private Rigidbody2D playerBody;
     // Start is called before the first frame update
     void Awake()
     {
-        // Note: This is a temporary solution, this only addresses a single instance
-        // of a "block." perhaps we can compile a tile palette and reference the palette.
-        // or use a prefab for 
-       // block = GameObject.FindGameObjectsWithTag("Platform(Solid)");
+        playerGround = GetComponentInChildren<Collider2D>();
+        playerCollider = GetComponent<Collider2D>();
+        playerBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void OnTriggerEnter(Collider col)
+    void Update()
     {
-       // if(col.gameObject = block.getComponent<BoxCollider2D>)
-      //  {
 
-       // }
-        
     }
 }

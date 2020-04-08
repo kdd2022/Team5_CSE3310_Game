@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform (Solid)
+  - Platform (Passable)
+  - MoveStick
+  - FightStick
   layers:
   - Default
   - TransparentFX
