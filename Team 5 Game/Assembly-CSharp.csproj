@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\ButtonJump.cs" />
      <Compile Include="Assets\Scripts\GravityCheck.cs" />
      <Compile Include="Assets\Scripts\PlayerCollision.cs" />
+     <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Player_Move.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Colin Kirchenbauer/Documents/Team5_Project/Team5_CSE3310_Game/Team 5 Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

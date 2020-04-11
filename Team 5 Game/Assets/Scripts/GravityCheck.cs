@@ -5,7 +5,7 @@ using UnityEngine;
 public class GravityCheck : MonoBehaviour
 {
     public float gravityMult = 2.5f;
-    public float smallJump = 1.0f;
+   
 
     Rigidbody2D rb;
 
