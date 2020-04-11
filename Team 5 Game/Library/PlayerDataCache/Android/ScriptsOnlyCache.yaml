@@ -5,8 +5,6 @@ ScriptsOnlyBuild:
     - Player_Move
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -48,15 +46,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11778}
+      Script: {instanceID: 11776}
     - Class: 114
-      Script: {instanceID: 12702}
+      Script: {instanceID: 12698}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12742}
     - Class: 114
-      Script: {instanceID: 13086}
+      Script: {instanceID: 12930}
     - Class: 114
-      Script: {instanceID: 17616}
+      Script: {instanceID: 13084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -394,6 +392,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 3e86f47501c2c1620e487d34afc8487a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player_Move
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -506,14 +510,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 3e86f47501c2c1620e487d34afc8487a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player_Move
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main Scene.unity
-  playerPath: C:/Users/Colin Kirchenbauer/Documents/Team5_Project/Team5_CSE3310_Game/Team
-    5 Game/Test.apk
+  playerPath: C:/Users/gama_/Documents/GitHub/Team5_CSE3310_Game/Team 5 Game/Test.apk
