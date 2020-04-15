@@ -15,8 +15,10 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]
     public float health = 0;
 
-    public GameObject drop;//your sword
 
+    //to assign what the enemy will drop. drag the object that you want the enemy to drop to this field 
+    [SerializeField]
+    public GameObject drop;
 
 
     //to select the player you need to drag the player object into the field
