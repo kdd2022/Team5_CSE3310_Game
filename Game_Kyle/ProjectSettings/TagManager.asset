@@ -6,6 +6,8 @@ TagManager:
   tags:
   - hitbox
   - enemy
+  - potion
+  - player
   layers:
   - Default
   - TransparentFX

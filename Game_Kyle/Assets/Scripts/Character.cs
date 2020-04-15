@@ -11,6 +11,11 @@ public class Character : MonoBehaviour
     private float dirX;
     private bool facingright = true;
 
+    public float player_Health = 0;
+
+    private potionAmount potionScript;
+    public GameObject potionbox;
+
     //jump height can be adjusted on the player object under character script
     [SerializeField]
     float jumpForce = 0;
@@ -33,10 +38,10 @@ public class Character : MonoBehaviour
         anim = GetComponent<Animator>();
 
         localScale = transform.localScale;
-
+        potionScript = potionbox.GetComponent<potionAmount>();
     }
 
-    
+
     void Update()
     {
         //Sets the movement speed of the character based on the button that is being pressed
@@ -46,7 +51,7 @@ public class Character : MonoBehaviour
 
 
         //This is used for flipping the sprite on the x-axis when it turns
-        
+
 
         //If the jump button is pressed and the character is touching an object with the layer set to ground it will jump
         if (CrossPlatformInputManager.GetButtonDown("Jump") && onGround)
@@ -57,6 +62,7 @@ public class Character : MonoBehaviour
         //If the attack button is pressed the character will make the attack animation. If it is not pressed the animation will not trigger
         if (CrossPlatformInputManager.GetButtonDown("Attack"))
         {
+            anim.SetBool("isJump", false);
             anim.SetBool("isAttack", true);
         }
         else
@@ -68,6 +74,7 @@ public class Character : MonoBehaviour
         if (rb.velocity.y != 0)
         {
             anim.SetBool("isJump", true);
+
         }
         else
         {
@@ -85,12 +92,21 @@ public class Character : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.tag == potionbox.tag)
+        {
+            player_Health += potionScript.healAmount;
+        }
+    }
+
+
     //this will update the rigidbody's velocity based on the movement speed of dirX and rb.velocity.y
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(dirX, rb.velocity.y);
     }
-    
+
     //this will check to see if the spite needs turn around
     private void LateUpdate()
     {
@@ -100,7 +116,7 @@ public class Character : MonoBehaviour
             facingright = true;
         }
         //else the character is moving left
-        else if(dirX < 0)
+        else if (dirX < 0)
         {
             facingright = false;
         }
@@ -116,4 +132,5 @@ public class Character : MonoBehaviour
         transform.localScale = localScale;
 
     }
+
 }

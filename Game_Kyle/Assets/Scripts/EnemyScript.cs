@@ -15,6 +15,9 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]
     public float health = 0;
 
+    public GameObject drop;//your sword
+
+
 
     //to select the player you need to drag the player object into the field
     //this will be used so the enemy can check their distance to the player
@@ -49,7 +52,7 @@ public class EnemyScript : MonoBehaviour
 
 
     void Update()
-    { 
+    {
         //This will determine between the enemy and the player
         float distToPlayer = Vector2.Distance(transform.position, player.position);
 
@@ -72,7 +75,7 @@ public class EnemyScript : MonoBehaviour
         }
         //else the character is not within range for the enemy to do anything so it will set both attack and walk animations to false
         //which should trigger the idle animation the start again
-        else 
+        else
         {
             rb2d.velocity = new Vector2(0, 0);
             anim.SetBool("canWalk", false);
@@ -94,6 +97,14 @@ public class EnemyScript : MonoBehaviour
 
 
     }
+
+
+    private void OnDestroy() //called, when enemy will be destroyed
+    {
+        Instantiate(drop, transform.position, drop.transform.rotation); //your dropped sword
+    }
+
+
 
     //This function will determine if the enemy has been hit by an attack
     void OnTriggerEnter2D(Collider2D target)
