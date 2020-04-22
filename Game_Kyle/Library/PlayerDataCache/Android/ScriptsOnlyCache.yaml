@@ -4,14 +4,22 @@ ScriptsOnlyBuild:
     - UnityStandardAssets.CrossPlatformInput.AxisTouchButton
     - UnityStandardAssets.CrossPlatformInput.ButtonHandler
     Assembly-CSharp.dll:
-    - Camera
+    - BackMain
+    - CameraFollow
     - Character
     - EnemyScript
+    - MainMenu
+    - healthPotion
     - myDamage
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -36,9 +44,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Level 1.unity:
+    Assets/Scenes/Level_1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -53,7 +62,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -68,31 +81,90 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11326}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11488}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 12010}
+      Script: {instanceID: 11790}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 11806}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 11968}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 12014}
     - Class: 114
-      Script: {instanceID: 13106}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 13142}
+      Script: {instanceID: 12722}
     - Class: 114
-      Script: {instanceID: 21628}
+      Script: {instanceID: 13070}
+    - Class: 114
+      Script: {instanceID: 13112}
+    - Class: 114
+      Script: {instanceID: 13146}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 251
+      Script: {instanceID: 0}
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11152}
+    - Class: 114
+      Script: {instanceID: 11326}
+    - Class: 114
+      Script: {instanceID: 11370}
+    - Class: 114
+      Script: {instanceID: 11790}
+    - Class: 114
+      Script: {instanceID: 12210}
+    - Class: 114
+      Script: {instanceID: 12536}
+    - Class: 114
+      Script: {instanceID: 12722}
+    - Class: 114
+      Script: {instanceID: 13112}
+    - Class: 114
+      Script: {instanceID: 13144}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -124,6 +196,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: c057a25a2321d262f6a4a013afc77480
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: myDamage
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -180,7 +258,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: bbd185188b041af78ae06d1287c93064
+      Hash: 02d42c7c750a6a45cbec4ee71b23c076
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Character
@@ -228,7 +306,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: fe5f5863d85e3a8bc85039065592f11f
+      Hash: 5584cc01e6d91674135f0a14bb82cb95
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyScript
@@ -244,6 +322,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackMain
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -276,12 +360,6 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Sensor_Bandit
-  - hash:
-      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -304,6 +382,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 98151c58a9008a70487afcae843007e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: healthPotion
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -444,12 +528,6 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: e41a547b14d42eeba4854fb180617c13
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Bandit
-  - hash:
-      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -460,6 +538,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
@@ -582,22 +666,16 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 3149e68b62b82493254e1c995849f227
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CharacterSelector_Bandit
-  - hash:
-      serializedVersion: 2
       Hash: 7072231382eb3c4871b3dd75ad0227e1
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: cbdaf6289eb255feedd0bee0a753faee
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Camera
+    className: CameraFollow
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
@@ -610,19 +688,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c057a25a2321d262f6a4a013afc77480
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: myDamage
-  - hash:
-      serializedVersion: 2
-      Hash: ea4fb572a02c622945a4d70f34e2c5dd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GetHit
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Level 1.unity
-  playerPath: C:/Users/gama_/Test/test.apk
+  - Assets/Scenes/MainMenu.unity
+  - Assets/Scenes/Level_1.unity
+  playerPath: C:/Users/gama_/Desktop/Game Project/Team5_CSE3310_Game-Kyle_Branch/Game_Kyle/test.apk

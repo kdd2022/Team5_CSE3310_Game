@@ -50,6 +50,7 @@ public class EnemyScript : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         damageScript = hitbox.GetComponent<myDamage>();
+
     }
 
 
@@ -103,7 +104,10 @@ public class EnemyScript : MonoBehaviour
 
     private void OnDestroy() //called, when enemy will be destroyed
     {
-        Instantiate(drop, transform.position, drop.transform.rotation); //your dropped sword
+        if(drop != null)
+        {
+            Instantiate(drop, transform.position, drop.transform.rotation);
+        }
     }
 
 

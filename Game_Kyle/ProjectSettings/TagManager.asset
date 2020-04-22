@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - potion
   - player
+  - drop
   layers:
   - Default
   - TransparentFX

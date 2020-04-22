@@ -11,10 +11,10 @@ public class Character : MonoBehaviour
     private float dirX;
     private bool facingright = true;
 
-    public float player_Health = 0;
+    public float playerHP;
+    public float playerMaxHP;
 
-    private potionAmount potionScript;
-    public GameObject potionbox;
+    
 
     //jump height can be adjusted on the player object under character script
     [SerializeField]
@@ -36,9 +36,7 @@ public class Character : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
         localScale = transform.localScale;
-        potionScript = potionbox.GetComponent<potionAmount>();
     }
 
 
@@ -48,10 +46,6 @@ public class Character : MonoBehaviour
         dirX = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
         //Sets the onGround boolean
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-
-
-        //This is used for flipping the sprite on the x-axis when it turns
-
 
         //If the jump button is pressed and the character is touching an object with the layer set to ground it will jump
         if (CrossPlatformInputManager.GetButtonDown("Jump") && onGround)
@@ -91,16 +85,7 @@ public class Character : MonoBehaviour
             anim.SetBool("isRun", false);
         }
     }
-
-    void OnTriggerEnter2D(Collider2D target)
-    {
-        if (target.tag == potionbox.tag)
-        {
-            player_Health += potionScript.healAmount;
-        }
-    }
-
-
+   
     //this will update the rigidbody's velocity based on the movement speed of dirX and rb.velocity.y
     private void FixedUpdate()
     {
